@@ -1,0 +1,7 @@
+.screencast-navigation {
+  background-color: #202124 !important; /* Pour appliquer la couleur de fond par défaut */
+}
+
+#runner {
+  padding-top: 23px !important; /* Pour décaler le screencast afin d'afficher la barre de navigation  */
+}
