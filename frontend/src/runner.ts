@@ -275,7 +275,7 @@ export default class Runner {
       );
     },
     500,
-    { isImmediate: true }
+    { isImmediate: false }
   );
 
   close = once((...args: any[]) => {
@@ -305,7 +305,7 @@ export default class Runner {
 
     const params: Protocol.Page.StartScreencastRequest = {
       format: 'jpeg',
-      quality: 100,
+      quality: 50,
       everyNthFrame: 1,
     };
     this.wsClient.send(

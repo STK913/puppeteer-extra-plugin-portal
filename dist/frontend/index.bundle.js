@@ -797,7 +797,7 @@ class Runner {
                 mobile: true,
             },
         }));
-    }, 500, { isImmediate: true });
+    }, 500, { isImmediate: false });
     close = (0,_util__WEBPACK_IMPORTED_MODULE_0__.once)((...args) => {
         this.onClose(...args);
         this.wsClient.close();
@@ -817,7 +817,7 @@ class Runner {
         this.resizePage();
         const params = {
             format: 'jpeg',
-            quality: 100,
+            quality: 50,
             everyNthFrame: 1,
         };
         this.wsClient.send(JSON.stringify({
