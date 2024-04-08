@@ -305,7 +305,7 @@ export default class Runner {
 
     const params: Protocol.Page.StartScreencastRequest = {
       format: 'jpeg',
-      quality: 50,
+      quality: parseInt(new URLSearchParams(window.location.search).get("quality") || "") || 100,
       everyNthFrame: 1,
     };
     this.wsClient.send(

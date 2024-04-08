@@ -817,7 +817,7 @@ class Runner {
         this.resizePage();
         const params = {
             format: 'jpeg',
-            quality: 50,
+            quality: parseInt(new URLSearchParams(window.location.search).get("quality") || "") || 100,
             everyNthFrame: 1,
         };
         this.wsClient.send(JSON.stringify({
